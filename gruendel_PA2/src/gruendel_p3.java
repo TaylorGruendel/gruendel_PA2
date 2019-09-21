@@ -5,18 +5,18 @@ public class gruendel_p3 {
 
           Scanner scnr = new Scanner(System.in);
           String[] topics = {"Shopping", "Work", "Food", "School", "Music"};
-
+	
              int [][] ratings = new int [topics.length][];
              int i;
              int j;
              int people;
              int rating;
 
-             for(i=0; i<ratings.length ;i++)
+             for(i = 0; i < ratings.length ; i++)
              {
             	 ratings[i] = new int[10];
 
-            	 	for(j=0; j<ratings[i].length ;j++)
+            	 	for(j = 0; j< ratings[i].length ; j++)
 
                            ratings[i][j] = 0;
              }
@@ -24,10 +24,10 @@ public class gruendel_p3 {
              System.out.print("Enter the number of people rating: ");
              people = scnr.nextInt();
              
-             for(i=0; i<people ;i++)
+             for(i = 0; i < people ; i++)
              {
             	 System.out.println("Rate each topic in the scale 1-10 for the below "+ topics.length+" topics : ");
-                    for(j=0 ; j< topics.length ; j++)
+                    for(j = 0 ; j < topics.length ; j++)
                     {
                            System.out.print("Enter your rating for "+ topics[j] +" : ");
                            rating = scnr.nextInt();
@@ -46,10 +46,10 @@ public class gruendel_p3 {
              String highestPointIssue="" , lowestPointIssue="" ;
              int highestPointTotal = 0 , lowestPointTotal= 0;
 
-             for(i=0; i<ratings.length; i++)
+             for(i =0; i < ratings.length; i++)
              {
                  avgRating[i] = 0;
-                    for(j=0;j<ratings[i].length;j++)
+                    for(j =0; j < ratings[i].length; j++)
                         avgRating[i] += (ratings[i][j]*(j+1));
 
                     if(i == 0)
@@ -80,7 +80,7 @@ public class gruendel_p3 {
 
              System.out.printf("\n%-20s","");
 
-             for(i=0;i<10;i++)
+             for(i = 0;i < 10; i++)
 	
 	             System.out.printf("%-10d",(i+1));
 	
@@ -88,7 +88,7 @@ public class gruendel_p3 {
 	
 	             System.out.println();
 
-             for(i=0;i<ratings.length; i++)
+             for(i = 0;i < ratings.length; i++)
              {
                     System.out.printf("\n%-20s",topics[i]);
                     for(j=0;j<ratings[i].length;j++)
